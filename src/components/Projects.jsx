@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
+import timeManagementImg from '../assets/images/Proyects-Carrier/Time managment.png';
+import icareImg from '../assets/images/Proyects-Carrier/Icare-image.png';
+import ecommerceImg from '../assets/images/Proyects-Carrier/Ecomerce.png';
 
 const projects = [
     {
@@ -8,7 +11,7 @@ const projects = [
         company: "Forentec",
         description: "Desarrollo de lógica UI y mejoras del sistema para un módulo activo relacionado con el gobierno. Despliegue de producción con uso profesional.",
         tech: ["JavaScript", "CSS", "HTML"],
-        image: "/src/assets/images/Proyects-Carrier/Time managment.png",
+        image: timeManagementImg,
         link: "https://forentec.com.mx/time"
     },
     {
@@ -17,7 +20,7 @@ const projects = [
         company: "Universidad de Colima",
         description: "Refactorización de UI y modernización usando Bootstrap. Parte de un sistema de monitoreo de dolor IoT para niños en hospitales. Mejoras significativas en usabilidad y rendimiento.",
         tech: ["Bootstrap", "JavaScript", "UI/UX"],
-        image: "/src/assets/images/Proyects-Carrier/Icare-image.png",
+        image: icareImg,
         link: "https://www.infancycare.com/web/"
     },
     {
@@ -26,7 +29,7 @@ const projects = [
         company: "Touch of Tech",
         description: "Desarrollo de componentes web profesionales y prácticos usando React, herramientas de API y Redux.",
         tech: ["React", "Redux", "API"],
-        image: "/src/assets/images/Proyects-Carrier/Ecomerce.png",
+        image: ecommerceImg,
         link: "https://ivanjason32.github.io/store-react-proyect/#/home"
     }
 ];

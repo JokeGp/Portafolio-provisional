@@ -1,10 +1,14 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
+import image1 from '../assets/images/Me-carrier/image1.jpeg';
+import image2 from '../assets/images/Me-carrier/image-2.jpeg';
+import image3 from '../assets/images/Me-carrier/imege-3.jpeg';
+
 const images = [
-    '/src/assets/images/Me-carrier/image1.jpeg',
-    '/src/assets/images/Me-carrier/image-2.jpeg',
-    '/src/assets/images/Me-carrier/imege-3.jpeg'
+    image1,
+    image2,
+    image3
 ];
 
 const ImageCarousel = () => {
@@ -44,8 +48,8 @@ const ImageCarousel = () => {
                             key={index}
                             onClick={() => setCurrentIndex(index)}
                             className={`h-2 rounded-full transition-all ${index === currentIndex
-                                    ? 'bg-white w-8'
-                                    : 'bg-white/50 hover:bg-white/75 w-2'
+                                ? 'bg-white w-8'
+                                : 'bg-white/50 hover:bg-white/75 w-2'
                                 }`}
                             aria-label={`Go to image ${index + 1}`}
                         />
