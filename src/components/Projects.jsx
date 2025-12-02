@@ -26,14 +26,14 @@ const projects = [
         company: "Touch of Tech",
         description: "Desarrollo de componentes web profesionales y prácticos usando React, herramientas de API y Redux.",
         tech: ["React", "Redux", "API"],
-        image: "/src/assets/images/Proyects-Carrier/project3.png", // Reemplaza con tu imagen
-        link: "#"
+        image: "/src/assets/images/Proyects-Carrier/Ecomerce.png",
+        link: "https://ivanjason32.github.io/store-react-proyect/#/home"
     }
 ];
 
 const Projects = () => {
     return (
-        <section className="py-20 px-8">
+        <section id="projects" className="py-20 px-8">
             <div className="max-w-6xl mx-auto">
                 <motion.h2
                     initial={{ opacity: 0, x: -20 }}
@@ -52,7 +52,7 @@ const Projects = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-gray-800/40 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all overflow-hidden group"
+                            className="bg-gray-900/40 backdrop-blur-md rounded-2xl border border-white/10 hover:border-purple-500/30 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] transition-all duration-300 overflow-hidden group"
                         >
                             {/* Image Container */}
                             <div className="relative h-48 bg-gray-700/30 overflow-hidden">

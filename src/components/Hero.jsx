@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Code } from 'lucide-react';
+import profilePic from '../assets/images/profile-picture.jpg';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center p-8 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex flex-col justify-center items-center text-center p-8 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-600/20 rounded-full blur-[100px]" />
@@ -20,10 +21,13 @@ const Hero = () => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, type: "spring", stiffness: 260, damping: 20 }}
-          className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 p-1"
+          className="relative w-40 h-40 mx-auto mb-8"
         >
-          <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
-            <img src="/src/assets/images/profile-picture.jpg" alt="José Enrique Guerrero Pérez" className="w-full h-full object-cover rounded-full" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-purple-600 to-blue-600 rounded-full blur-lg opacity-75 animate-pulse" />
+          <div className="relative w-full h-full rounded-full p-[2px] bg-gradient-to-tr from-purple-500 via-blue-500 to-purple-500">
+            <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
+              <img src={profilePic} alt="José Enrique Guerrero Pérez" className="w-full h-full object-cover rounded-full" />
+            </div>
           </div>
         </motion.div>
 
@@ -42,21 +46,24 @@ const Hero = () => {
 
         <div className="flex gap-6 justify-center">
           {[
-            { Icon: Github, href: "#" },
-            { Icon: Linkedin, href: "#" },
-            { Icon: Mail, href: "mailto:example@email.com" }
+            { Icon: Github, href: "https://github.com/JokeGp" },
+            { Icon: Linkedin, href: "https://www.linkedin.com/in/guerrero-perez-jose-enrique-727045206/" },
+            { Icon: Mail, href: "mailto:quiqueguerrero23@gmail.com" }
           ].map(({ Icon, href }, index) => (
             <motion.a
               key={index}
               href={href}
-              whileHover={{ scale: 1.1, color: "#a855f7" }}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
-              className="p-3 bg-gray-800/50 rounded-full text-white hover:bg-gray-800 transition-colors"
+              className="p-4 bg-gray-900/50 backdrop-blur-md border border-white/10 rounded-2xl text-white hover:border-purple-500/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all group"
             >
-              <Icon size={24} />
+              <Icon size={24} className="group-hover:text-purple-400 transition-colors" />
             </motion.a>
           ))}
         </div>
+
       </motion.div>
 
       <motion.div
@@ -67,7 +74,7 @@ const Hero = () => {
       >
         <span className="text-sm text-gray-500">Desliza para ver más</span>
       </motion.div>
-    </section>
+    </section >
   );
 };
 

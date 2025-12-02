@@ -49,7 +49,7 @@ const experiences = [
 
 const Experience = () => {
     return (
-        <section className="py-20 px-8 bg-gray-900/50">
+        <section id="experience" className="py-20 px-8 bg-gray-900/50">
             <div className="max-w-4xl mx-auto">
                 <motion.h2
                     initial={{ opacity: 0, x: -20 }}
@@ -68,7 +68,7 @@ const Experience = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.2 }}
-                            className="bg-gray-800/40 p-6 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-colors"
+                            className="bg-gray-900/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:border-purple-500/30 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] transition-all duration-300"
                         >
                             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
                                 <div>
