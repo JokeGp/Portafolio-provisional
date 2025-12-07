@@ -65,7 +65,7 @@ const Projects = () => {
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                                     onError={(e) => {
                                         e.target.style.display = 'none';
-                                        e.target.parentElement.innerHTML = '<div class="w-full h-full flex items-center justify-center text-gray-500"><span>Agrega tu captura aquí</span></div>';
+                                        e.target.parentElement.innerHTML = '<div class="w-full h-full flex items-center justify-center text-gray-500"><span>Imagen no disponible</span></div>';
                                     }}
                                 />
                             </div>
